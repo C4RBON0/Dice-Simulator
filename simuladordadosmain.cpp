@@ -1,6 +1,6 @@
 //Simulador Lanzador de dados para Dungeons and Dragons
 //Angel Cervera Ronda
-//Version 1.0
+//Version 1.1
 
 #include <iostream>
 #include <cstdlib>
@@ -201,7 +201,11 @@ int main(){
 
 cout << "Simulador de lanzador de dados para Dungeons and Dragons" << endl << endl;
 
+bool salir = true;
 
+while(salir){
+
+string salir2;
 int numero;
 string respuesta = "y";
 
@@ -231,6 +235,19 @@ else{
 
 		lanzador(numero,respuesta);
 	}
+}
+
+cout << "Desea salir? (y/n)";
+cin >> salir2;
+
+if (salir2 != "y" && salir2 != "n"){
+			cout << "Valor introducido incorrecto" << endl;
+		}
+		else if (salir2 == "y")
+		{
+			salir = false;
+		}
+
 }
 
 cout << "Presiona Enter para salir..." << endl;
